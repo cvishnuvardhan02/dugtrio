@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Attendance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Employee Attendance</h1>
+        </header>
+        <div id="login" class="card">
+            
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+                <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+            </form>
+        </div>
+        <div id="registerDevice" class="card hidden">
+            <h2>Register Device</h2>
+            <div class="input-group">
+                <label for="deviceType">Device Type:</label>
+                <select id="deviceType">
+                    <option value="">Select Device Type</option>
+                    <option value="iOS">iOS</option>
+                    <option value="Android">Android</option>
+                </select>
+            </div>
+            <button id="registerDeviceButton" class="btn-primary">Register Device</button>
+            <div id="deviceStatus"></div>
+        </div>
+        <div id="attendance" class="card hidden">
+            <h2>Attendance</h2>
+            <div class="attendance-buttons">
+                <button id="morningAttendanceButton" class="btn-secondary hidden">Morning Check-in</button>
+                <button id="eveningAttendanceButton" class="btn-secondary hidden">Evening Check-out</button>
+            </div>
+            <ul id="list"></ul>
+            <div id="status"></div>
+        </div>
+        <div id="forgotPassword" class="card hidden">
+            <h2>Forgot Password</h2>
+            <form id="forgotPasswordForm">
+                <div class="input-group">
+                    <label for="mobileNumber">Mobile Number:</label>
+                    <input type="text" id="mobileNumber" required>
+                </div>
+                <button type="submit" class="btn-primary">Send OTP</button>
+            </form>
+            <form id="resetPasswordForm" class="hidden">
+                <div class="input-group">
+                    <label for="otp">Enter OTP:</label>
+                    <input type="text" id="otp" required>
+                </div>
+                <div class="input-group">
+                    <label for="newPassword">New Password:</label>
+                    <input type="password" id="newPassword" required>
+                </div>
+                <button type="submit" class="btn-primary">Reset Password</button>
+            </form>
+            <div id="forgotPasswordStatus"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
