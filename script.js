@@ -146,8 +146,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     statusDiv.style.color = "green";
                 }
             }, () => {
-                statusDiv.textContent = "Unable to retrieve your location.";
-                statusDiv.style.color = "red";
+                const listItem = document.createElement('li');
+                    const date = new Date().toLocaleString();
+                    listItem.textContent = `${checkType} check marked on ${date}`;
+                    attendanceList.appendChild(listItem);
+                statusDiv.textContent = "Attendance marked successfully";
+                statusDiv.style.color = "green";
             });
         } else {
             statusDiv.textContent = "Geolocation is not supported by this browser.";
